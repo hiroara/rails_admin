@@ -227,6 +227,8 @@ module RailsAdmin
           case property.type.to_s
           when 'Array', 'Hash', 'Money'
             :serialized
+          when 'Mongoid::Geospatial::Point'
+            :serialized
           when 'BigDecimal'
             :decimal
           when 'Boolean', 'Mongoid::Boolean'
