@@ -163,6 +163,7 @@ module RailsAdmin
       def type_lookup(name, field)
         {
           "Array"          => { :type => :serialized },
+          "Mongoid::Geospatial::Point" => { :type => :serialized },
           "BigDecimal"     => { :type => :decimal },
           "Mongoid::Boolean"        => { :type => :boolean },
           "Boolean"        => { :type => :boolean },
